@@ -1,0 +1,445 @@
+/* ======= Start Variables =======  */
+:root {
+  /* ====== Colors ======  */
+  --main-clr: hsl(212, 100%, 50%);
+  --overlay-clr: hsla(212, 100%, 50%, 0.7);
+  --txt-clr: hsl(0, 0%, 31%);
+  --heading-clr: hsl(0, 0%, 12%);
+  --light-blue-clr: hsl(212, 75%, 89%);
+
+  /* ====== Transition ======  */
+  --main-transition: 300ms;
+}
+
+/* ======= End Variables =======  */
+
+/* ======= Global rules =======  */
+
+body {
+  background-color: #f5f5f5;
+  color: var(--txt-clr);
+}
+
+/* ====== Start Scrollbar ======  */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-left: 2px solid var(--main-clr);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-clr);
+  box-shadow: 0 0 0px 0 #fff inset;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #002d60;
+}
+
+::-webkit-scrollbar-button {
+  background-size: cover;
+  background-position: center center;
+  background-color: var(--heading-clr);
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+  background-image: url(../Images/arrow-down.svg);
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+  background-image: url(../Images/arrow-up.svg);
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+}
+
+/* ====== End Scrollbar ======  */
+
+.overlay {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* ===== Main Title ===== */
+
+.main-title h2 {
+  font-size: 3rem;
+  color: var(--heading-clr);
+}
+
+.main-title p::after {
+  content: "";
+  width: 35px;
+  height: 5px;
+  background-color: var(--main-clr);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* ===== Secondary Title ===== */
+
+.secondary-title h3 {
+  color: var(--heading-clr);
+}
+
+.secondary-title h3::after {
+  content: "";
+  width: 100px;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 35px;
+  background-color: var(--main-clr);
+}
+
+/* ====== Start Navbar ====== */
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar .logo {
+  letter-spacing: 1px;
+}
+
+ul.navbar-nav li a::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: 1rem;
+  transition: width 300ms;
+}
+
+ul.navbar-nav li a:hover::before {
+  width: 50%;
+}
+
+ul.navbar-nav .nav-link.active {
+  background-color: transparent;
+}
+
+ul.navbar-nav .nav-link.active::before {
+  width: 50%;
+}
+
+.navbar .dropdown-menu li a {
+  color: var(--txt-clr);
+}
+.navbar .dropdown-menu li a i {
+  font-size: 14px;
+}
+
+ul.main-menu li:hover > a {
+  color: var(--main-clr);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: transparent;
+}
+
+li.main-menu:hover ul.main-menu {
+  display: block !important;
+}
+
+ul.sub-menu {
+  width: fit-content;
+}
+
+ul.sub-menu li a {
+  color: var(--txt-clr);
+}
+
+li.sub-menu:hover ul.sub-menu {
+  display: block !important;
+}
+/* ====== End Navbar ====== */
+
+/* ====== Start Header ====== */
+header {
+  background-image: url(../Images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+header .overlay {
+  background-color: hsla(0, 0%, 0%, 0.55);
+}
+
+header .overlay h1 {
+  font-size: clamp(3rem, 4.7vw, 4.5rem);
+}
+
+header .overlay p {
+  font-size: clamp(1.5rem, 2.75vw, 3rem);
+}
+
+header .overlay p::before {
+  content: "";
+  animation: typing 12s infinite;
+}
+
+header .overlay p::after {
+  content: "";
+  width: 5px;
+  height: 60%;
+  background-color: #fff;
+  position: absolute;
+  right: 8px;
+  top: 55%;
+  transform: translateY(-50%);
+  animation: typing-cursor 12s infinite;
+}
+/* ====== End Header ====== */
+
+/* ======Start About ====== */
+
+.about .image {
+  max-width: 200px;
+}
+
+address.about-info h3 {
+  font-size: 18px;
+  color: var(--heading-clr);
+}
+
+address.about-info :is(h4, a) {
+  font-size: 17px;
+  color: var(--txt-clr);
+}
+
+.progress {
+  background-color: var(--light-blue-clr);
+  --bs-progress-height: 0.75rem;
+}
+
+.brief h2 {
+  width: fit-content;
+  color: var(--heading-clr);
+}
+
+.brief h2::after {
+  content: "";
+  width: 80%;
+  height: 3px;
+  background-color: var(--main-clr);
+  position: absolute;
+  left: 0;
+  bottom: 35px;
+}
+
+.brief p {
+  font-size: 1.25rem;
+}
+
+.skills h3 {
+  color: var(--heading-clr);
+}
+
+/* ====== End About ====== */
+
+/* ====== Start Services ====== */
+
+.services .row {
+  row-gap: 2.5rem;
+  column-gap: 1.5rem;
+}
+
+.service-icon {
+  --bs-border-color: var(--main-clr);
+  --bs-border-width: 10px;
+  color: var(--heading-clr);
+  width: 100px;
+  height: 100px;
+  box-sizing: content-box;
+  transition: background-color var(--main-transition),
+    border-color var(--main-transition), color var(--main-transition);
+}
+
+.service-icon i {
+  font-size: 2.4rem;
+}
+
+.service-card:hover .service-icon {
+  --bs-border-color: var(--light-blue-clr);
+  background-color: var(--main-clr);
+  color: #fff;
+}
+
+.service-card h3 {
+  color: var(--heading-clr);
+}
+
+/* ====== End Services ====== */
+
+/* ====== Start Statistics ====== */
+
+.statistics {
+  padding: 8rem 0;
+  background-image: linear-gradient(var(--overlay-clr), var(--overlay-clr)),
+    url(../Images/counters-bg.jpg);
+}
+
+.statistics .statistic-icon {
+  --bs-border-color: var(--light-blue-clr);
+  --bs-border-width: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+.statistic-icon i {
+  font-size: 2rem;
+}
+
+/* ====== End Statistics ====== */
+
+/* ====== Start Portfolio ====== */
+
+.portfolio .card .image img {
+  transition: transform calc(var(--main-transition) * 2) ease-in-out;
+}
+
+.portfolio .card:hover .image img {
+  transform: scale(1.25);
+}
+
+.card-body .card-title {
+  color: var(--heading-clr);
+}
+
+.card-body .plus-icon {
+  width: fit-content;
+  transition: transform var(--main-transition);
+}
+
+.card-body .plus-icon i {
+  font-size: clamp(1.5625rem, 6vw, 2.0625rem);
+}
+
+.card-body .plus-icon:hover {
+  transform: scale(1.1) rotate(360deg);
+}
+
+.text p {
+  font-size: 13px;
+}
+
+.text p a {
+  color: var(--main-clr);
+}
+
+/* ====== End Portfolio ====== */
+
+/* ====== Start Testimonial ====== */
+
+.testimonial,
+.contact {
+  background-image: url(../Images/overlay-bg.jpg);
+}
+
+.testimonial-overlay {
+  padding: 8rem 0;
+  background-color: var(--overlay-clr);
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+}
+
+.carousel-item p {
+  max-width: 900px;
+}
+
+/* ====== End Testimonial ====== */
+
+/* ====== Start Blog ====== */
+
+.blog .card-body .tag {
+  padding: 6px 12px;
+  background-color: var(--main-clr);
+  font-size: 12px;
+}
+
+.blog .writer .image {
+  width: 30px;
+}
+
+.blog .writer h5 {
+  color: var(--heading-clr);
+  transition: color var(--main-transition);
+}
+
+.blog .writer h5:hover {
+  color: var(--main-clr);
+}
+
+/* ====== End Blog ====== */
+
+/* ====== Start Contact ====== */
+
+.contact-overlay {
+  padding: 8rem 1rem 3rem;
+  background-color: var(--overlay-clr);
+}
+
+.contact form textarea {
+  min-height: 150px;
+  max-height: 300px;
+}
+
+.contact form button {
+  background-color: var(--main-clr);
+  transition: outline var(--main-transition),
+    background-color var(--main-transition);
+}
+
+.contact form button:hover {
+  background-color: #3393ff;
+  outline: 5px solid var(--light-blue-clr);
+}
+
+.get-in-touch address a {
+  color: var(--txt-clr);
+}
+
+.get-in-touch address i {
+  color: var(--main-clr);
+}
+
+.social-icons > div {
+  --bs-border-color: var(--main-clr);
+  color: var(--heading-clr);
+  width: 50px;
+  height: 50px;
+  transition: background-color var(--main-transition),
+    color var(--main-transition), border-color var(--main-transition);
+}
+
+.social-icons > div:hover {
+  --bs-border-color: var(--light-blue-clr);
+  background-color: var(--main-clr);
+  color: #fff;
+}
+
+/* ====== End Contact ====== */
+
+/* ====== Start Footer ====== */
+
+.footer {
+  background-color: #0062d3;
+  box-shadow: 0px 4px 8px 0px #0000001f inset;
+}
+/* ====== End Footer ====== */

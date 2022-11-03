@@ -1,0 +1,74 @@
+/* ===== Navbar ====== */
+@media screen and (min-width: 992.1px) and (max-width: 1400px) {
+  li.sub-menu:hover ul.sub-menu {
+    top: 0 !important;
+    left: 0 !important;
+    transform: translateX(-100%);
+  }
+}
+@media screen and (max-width: 992px) {
+  .navbar-collapse {
+    position: relative;
+  }
+
+  .navbar-collapse .navbar-nav {
+    background-color: #f5f5f5;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    box-shadow: 0 0 10px 0 #0004;
+    left: 0;
+    transform: translateY(8px);
+  }
+
+  .navbar-collapse a {
+    color: var(--txt-clr) !important;
+  }
+
+  ul.navbar-nav li:hover > a {
+    color: var(--main-clr) !important;
+  }
+
+  ul.main-menu {
+    width: 95%;
+    margin-inline: auto;
+  }
+
+  ul.sub-menu {
+    background-color: #f1f1f1 !important;
+    position: static !important;
+  }
+
+  li.sub-menu:hover ul.sub-menu {
+    margin-left: 30px;
+    top: 100% !important;
+    left: 0 !important;
+    width: calc(100% - 60px) !important;
+  }
+
+  ul.navbar-nav li a::before {
+    display: none;
+  }
+}
+
+/* ===== Header ====== */
+@media screen and (max-width: 1200px) {
+  header .overlay p::after {
+    width: 4px;
+    right: 4px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header .overlay p::after {
+    width: 3px;
+    right: 8px;
+  }
+}
+
+/* ===== Services ====== */
+@media screen and (min-width: 768px) {
+  .service-card.col-md-4 {
+    width: calc((100% - 3rem) / 3);
+  }
+}

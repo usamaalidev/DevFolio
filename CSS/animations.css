@@ -1,0 +1,194 @@
+@keyframes typing {
+  0%,
+  26.2%,
+  55.64%,
+  99.4%,
+  100% {
+    content: "";
+  }
+  1.08%,
+  25.66% {
+    content: "F";
+  }
+  2.16%,
+  25.12% {
+    content: "Fr";
+  }
+  3.24%,
+  24.58% {
+    content: "Fre";
+  }
+  4.32%,
+  24.04% {
+    content: "Free";
+  }
+  5.4%,
+  23.5% {
+    content: "Freel";
+  }
+  6.48%,
+  22.96% {
+    content: "Freela";
+  }
+  7.56%,
+  22.42% {
+    content: "Freelan";
+  }
+  8.64%,
+  21.88% {
+    content: "Freelanc";
+  }
+  9.72%,
+  21.34% {
+    content: "Freelance";
+  }
+  10.8%,
+  20.8% {
+    content: "Freelancer";
+  }
+  27.28%,
+  55.1% {
+    content: "P";
+  }
+  28.36%,
+  54.56% {
+    content: "Ph";
+  }
+  29.44%,
+  54.02% {
+    content: "Pho";
+  }
+  30.52%,
+  53.48% {
+    content: "Phot";
+  }
+  31.6%,
+  52.94% {
+    content: "Photo";
+  }
+  32.68%,
+  52.4% {
+    content: "Photog";
+  }
+  33.76%,
+  51.86% {
+    content: "Photogr";
+  }
+  34.84%,
+  51.32% {
+    content: "Photogra";
+  }
+  35.92%,
+  50.78% {
+    content: "Photograp";
+  }
+  37%,
+  50.24% {
+    content: "Photograph";
+  }
+  38.08%,
+  49.7% {
+    content: "Photographe";
+  }
+  39.16%,
+  49.16% {
+    content: "Photographer";
+  }
+  56.72%,
+  98.86% {
+    content: "D";
+  }
+  57.8%,
+  98.32% {
+    content: "De";
+  }
+  58.88%,
+  76.98% {
+    content: "Des";
+  }
+  59.96%,
+  76.44% {
+    content: "Desi";
+  }
+  61.04%,
+  75.9% {
+    content: "Desig";
+  }
+  62.12%,
+  75.36% {
+    content: "Design";
+  }
+  63.2%,
+  74.82% {
+    content: "Designe";
+  }
+  64.28%,
+  74.28% {
+    content: "Designer";
+  }
+  78.06%,
+  97.78% {
+    content: "Dev";
+  }
+  79.14%,
+  97.24% {
+    content: "Deve";
+  }
+  80.22%,
+  96.7% {
+    content: "Devel";
+  }
+  81.3%,
+  96.16% {
+    content: "Develo";
+  }
+  82.38%,
+  95.62% {
+    content: "Develop";
+  }
+  83.46%,
+  95.08% {
+    content: "Develope";
+  }
+  84.54%,
+  94.54% {
+    content: "Developer";
+  }
+}
+
+@keyframes typing-cursor {
+  0%,
+  10.8%,
+  14.8%,
+  18.8%,
+  20.8%,
+  39.16%,
+  43.16%,
+  47.16%,
+  49.16%,
+  64.28%,
+  68.28%,
+  72.28%,
+  74.28%,
+  84.54%,
+  88.54%,
+  92.54%,
+  94.54% {
+    opacity: 1;
+  }
+
+  12.8%,
+  16.8%,
+  20.7%,
+  41.16%,
+  45.16%,
+  49%,
+  66.28%,
+  70.28%,
+  74.1%,
+  86.54%,
+  90.54%,
+  94.4% {
+    opacity: 0;
+  }
+}
